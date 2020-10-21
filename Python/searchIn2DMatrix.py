@@ -17,6 +17,21 @@ class Solution:
             else:
                 high=mid-1
         return False
-    
+'''
 #same problem with different constraints- 
-# https://www.geeksforgeeks.org/search-in-row-wise-and-column-wise-sorted-matrix/
+# https://practice.geeksforgeeks.org/problems/search-in-a-matrix17201720/1
+# solution-
+class Solution:
+	def matSearch(self,mat, N, M, X):
+		# Complete this function
+		i=0
+		j=M-1
+		while i<N and j>=0:
+		    if mat[i][j]==X:
+		        return 1
+		    elif mat[i][j]>X:
+		        j-=1
+		    else:
+		        i+=1
+		return 0
+'''
